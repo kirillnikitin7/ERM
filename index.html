@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6b4229">
+  <title>Кондитерская фабрика — CRM</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="loginScreen" class="login-screen">
+  <form id="loginForm" class="login-card">
+    <div class="brand-mark">■</div><h1>Кондитерская фабрика</h1>
+    <p class="muted">Система управления производством</p>
+    <label>Логин<input id="loginEmail" type="email" value="admin@factory.local" required></label>
+    <label>Пароль<input id="loginPassword" type="password" value="admin123" required></label>
+    <button class="btn full">Войти в систему</button>
+    <small>Демо-доступ: admin@factory.local / admin123</small>
+  </form>
+</div>
+<div id="app" class="app hidden">
+  <header class="topbar">
+    <a class="brand" href="#" data-page="dashboard"><span class="brand-mark small">■</span><span>Кондитерская фабрика<small>Управление бизнесом</small></span></a>
+    <div class="top-search"><input id="globalSearch" placeholder="Поиск по системе..."></div>
+    <div class="userbox"><span class="avatar">А</span><span>Администратор<small>Администратор</small></span><button id="logoutBtn" class="plain" title="Выйти">↪</button></div>
+  </header>
+  <aside class="sidebar">
+    <div class="nav-caption">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom">Версия 1.0.0<br>© 2026 Кондитерская фабрика</div>
+  </aside>
+  <main class="main">
+    <div class="page-head"><div><div class="crumb">Главная / <span id="crumb">Обзор</span></div><h1 id="pageTitle">Обзор</h1><p class="muted">Управление и контроль основных показателей</p></div><button id="addBtn" class="btn hidden">＋ Добавить</button></div>
+    <div id="content"></div>
+  </main>
+</div>
+<div id="modal" class="modal hidden"><div class="modal-card"><div class="panel-title"><h2 id="modalTitle">Новая запись</h2><button id="closeModal" class="plain">✕</button></div><form id="recordForm"><div id="formFields" class="record-form"></div><div class="modal-actions"><button type="button" id="cancelModal" class="btn light">Отмена</button><button class="btn">Сохранить</button></div></form></div></div>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+</body></html>
